@@ -1,1 +1,2 @@
 pyjson5
+requests

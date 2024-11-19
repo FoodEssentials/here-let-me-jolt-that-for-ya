@@ -56,7 +56,49 @@ Once you're done troubleshooting the jolt you can copy the jolt out of the jolt.
 supposed to go
 
 **IMPORTANT: remember to strip out any json5 stuff like comments before you put the updated jolt wherever it needs to go
-**. 
+**.
 
+# Intellij idiosyncrasies and workarounds
 
+Intellij is kind of weird about shoving python into a kotlin project, either that or I did it kind of wrong :| It means
+that there are a couple of steps you may need to do manually to make it work. If I can figure out how to correct it I'll
+update the project, but for now you may have to do some manual steps.
 
+## Adding the python interpreter
+
+Normally if you use something like pycharm the IDE will walk you through getting the python interpreter and virtual
+environment setup. Here you have to do it manually.
+
+![setting up python interpreter](./readme_attachments/setting-up-python-interpreter.gif)
+
+- Open your project settings -> Facets
+- Click the `+` button to add a Python facet
+  ![setting up python interpreter](./readme_attachments/add-python-facet.png)
+- After the facet is added you should see a select dropdown that allows you to select an existing interpreter (i.e. the
+  python executable).
+    - If you don't get an interpreter in the list you can use the triple dot menu to select an interpreter from your
+      computer.
+    - If you don't have an interpreter installed on your computer already, you'll need to use a tool
+      like [homebrew](https://brew.sh/) to install python, or if you're on windows install it
+      from [the python website](https://www.python.org/downloads/windows/) (I don't know if windows has package managers
+      now that I think of it :| )
+- There should now be a Python module in your project settings Modules section. If there's not you can use the `+`
+  button to add one and select the python interpreter you just set up.
+  ![python module](./readme_attachments/python-module-settings.png)
+- Once you click ok the python files should stop complaining about needing an interpreter (you may have to close and
+  re-open the python file)
+
+## Installing depdendencies
+
+Normally in pycharm the IDE will see the requirements.txt file and offer to install things for you. In intellij it
+doesn't (or at least the way I have it set up it doesn't. Maybe there's a correct way, but I couldn't find it in the
+docs).
+
+That said, Intellij has a "Python Packages" tool window where you can install the packages manually.
+
+![python packages tool window from side bar](readme_attachments/python-packages-tool-from-side-bar.png)
+![python packages tool window from menu](readme_attachments/python-packages-tool-from-menu.png)
+
+From this tool window you can search for each of the requirements
+from [the requirements.txt file](client/requirements.txt) and install them.  
+![installing dependencies](readme_attachments/installing-python-dependencies.png)
