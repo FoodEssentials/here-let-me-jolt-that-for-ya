@@ -11,6 +11,13 @@ as a tool for making the best of a bad situation.
 
 ## What it is
 
+In addition to the explanation
+below, [we did an overview of this tool](https://nielsenenterprise.sharepoint.com/:v:/r/sites/LIEngineering/Shared%20Documents/signoff_jolt%20tooling-20241119_133223-Meeting%20Recording.mp4?csf=1&web=1&e=u2H00w&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+during a ticket sign off process and recorded it. There are some additional details in there about navigating around
+symbols, explaning what the jolt version actually means and what it _should mean_ in context of our apis vs customer
+apis, practical examples of executing the tool, stuff like that. If you're planning on using this tool it's worth
+watching or at least skimming through the video at 2x speed.
+
 This codebase is a toolset for testing out and troubleshooting a jolt document fired against a given input. The output
 of the transformation is written to a json file, pretty printed, so you can review the output. Really, it's
 like a local version of [the online jolt tester tool](https://jolt-demo.appspot.com/#inception), but it has a couple of
